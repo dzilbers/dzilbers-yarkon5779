@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Targil1
+namespace Yarkon5779
 {
     static partial class SearchAndSort
     {

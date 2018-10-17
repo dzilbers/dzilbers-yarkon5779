@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace Targil1
+namespace Yarkon5779
 {
     static partial class SearchAndSort
     {
-        static private Random random = new Random();
+        static private Random random = new Random(DateTime.Now.Millisecond);
         static private int[] numbers = new int[10];
 
         static void Main(string[] args)
