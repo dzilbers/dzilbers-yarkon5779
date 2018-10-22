@@ -56,7 +56,7 @@ namespace Yarkon5779
                 return 0;
 
             int max1 = arr[last];
-            int index = findMax(arr, last - 1);
+            int index = findMax2(arr, last - 1);
             int max2 = arr[index];
 
             return max1 >= max2 ? last : index;
