@@ -44,8 +44,6 @@ namespace Yarkon5779
             Console.WriteLine("Insertion sort: ");
             BubbleSort(numbers);
             printNumbers(numbers);
-
-
         }
 
         static private void swap(int[] arr, int i, int j)

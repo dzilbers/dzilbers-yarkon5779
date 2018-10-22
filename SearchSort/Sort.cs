@@ -12,27 +12,31 @@ namespace Yarkon5779
         // מיון בחירה - פוקצייה עוטפת ציבורית
         public static void SortSelection1(int[] arr)
         {
-            SortSelection1(arr, arr.Length - 1);
+            sortSelection1(arr, arr.Length - 1);
         }
         // מיון בחירה רקורסיבי
-        private static void SortSelection1(int[] arr, int last)
+        private static void sortSelection1(int[] arr, int last)
         {
-            if (last <= 0) // recurs. stop cond.
-                return;
+            if (last <= 0) // recursion stop condition תנאי העצירה של רקורסיה
+                return;  // מערך בגודל 1 או פחות אין מה למיין 
 
             int index = findMax1(arr, last);
             if (index != last)
                 swap(arr, index, last);
-            SortSelection1(arr, last - 1);
+            sortSelection1(arr, last - 1);
         }
 
         // מיון בחירה לא רקורסיבי
         public static void SortSelection2(int[] arr)
         {
+            // נתחיל בסוף המערך ונעבור במערך מהסוף להתחלה
             for (int i = arr.Length - 1; i >= 0; ++i)
             {
+                // נמצא את האלמנט עם הערך המקסימלי בחלק של המערך עד האלמנט הנוכחי כולל
                 int index = findMax1(arr, i);
-                if (index != i)
+                if (index != i) // אם האלמנט הנוכחי אינו מקסימלי
+                    // נחליף ערכם בין האלמנט הנוכחי לאלמנט המקסימלי שמצאנו
+                    // וכך נעביר את הערך המקסימלי לאלמנט הנוכחי
                     swap(arr, index, i);
             }
         }
@@ -40,10 +44,12 @@ namespace Yarkon5779
         // מיון הכנסה
         public static void SortInsertion(int[] arr)
         {
+            // נעבור על האלמנטים מהשני ועד סוף המערך
             for (int i = 1; i < arr.Length; ++i)
             {
-                int num = arr[i];
-                insertToSortedArray(arr, i, num);
+                // נכניס את האלמנט לחלק במערך שלשמאלנו
+                // נ.ב. החלק במערך שמשמאלנו יהיה כבר ממויין
+                insertToSortedArray(arr, i, arr[i]);
             }
         }
 
@@ -51,11 +57,14 @@ namespace Yarkon5779
         private static void insertToSortedArray(int[] arr, int n, int num)
         {
             int i;
+            // נחפש איפה להכניס מספר חדש במערך קיים ממוין
             for (i = 0; i < n && arr[i] < num; ++i);
 
+            // נזיז ימינה את כל האלמנטים מהמקום שמצאנו ועד סוף המערך
             for (int j = n - 1; j >= i; --j)
                 arr[j + 1] = arr[j];
 
+            // נכניס את המספר החדש במקום שמצאנו
             arr[i] = num;
         }
         
