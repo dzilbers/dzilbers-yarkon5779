@@ -9,31 +9,31 @@ namespace Yarkon5779
 
         static void Main(string[] args)
         {
-            //for (int i = numbers.Length - 1; i >= 0; --i)
-            //{
-            //    numbers[i] = random.Next(100);
-            //}
-            //Console.WriteLine("Original array: ");
-            //printNumbers(numbers);
-            ////int number = int.Parse(Console.ReadLine());
-            ////Console.WriteLine(Search1(numbers, number));
-            //Console.WriteLine("Selection sort: ");
-            //SortSelection(numbers);
-            //printNumbers(numbers);
+            for (int i = numbers.Length - 1; i >= 0; --i)
+            {
+                numbers[i] = random.Next(100);
+            }
+            Console.WriteLine("Original array: ");
+            printNumbers(numbers);
+            //int number = int.Parse(Console.ReadLine());
+            //Console.WriteLine(Search1(numbers, number));
+            Console.WriteLine("Selection sort: ");
+            SortSelection1(numbers);
+            printNumbers(numbers);
 
-            //Console.WriteLine();
+            Console.WriteLine();
 
-            //for (int i = numbers.Length - 1; i >= 0; --i)
-            //{
-            //    numbers[i] = random.Next(100);
-            //}
-            //Console.WriteLine("Original array: ");
-            //printNumbers(numbers);
-            //Console.WriteLine("Insertion sort: ");
-            //numbers = SortInsertion(numbers);
-            //printNumbers(numbers);
+            for (int i = numbers.Length - 1; i >= 0; --i)
+            {
+                numbers[i] = random.Next(100);
+            }
+            Console.WriteLine("Original array: ");
+            printNumbers(numbers);
+            Console.WriteLine("Insertion sort: ");
+            SortInsertion(numbers);
+            printNumbers(numbers);
 
-            //Console.WriteLine();
+            Console.WriteLine();
 
             for (int i = numbers.Length - 1; i >= 0; --i)
             {
