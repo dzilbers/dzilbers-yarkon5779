@@ -44,6 +44,16 @@ namespace Yarkon5779
             Console.WriteLine("Insertion sort: ");
             BubbleSort(numbers);
             printNumbers(numbers);
+
+            for (int i = numbers.Length - 1; i >= 0; --i)
+            {
+                numbers[i] = random.Next(100);
+            }
+            Console.WriteLine("Original array: ");
+            printNumbers(numbers);
+            Console.WriteLine("Insertion sort: ");
+            BubbleSort(numbers);
+            printNumbers(numbers);
         }
 
         static private void swap(int[] arr, int i, int j)
