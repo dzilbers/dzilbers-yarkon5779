@@ -10,11 +10,9 @@
    
         private static void sortMerge(int[] arr, int start, int end)
         {
-            // Recursion stop condition - array of size 1 or 0 is already sorted
+            // Recursion stop condition - array of size 1 (or 0) is already sorted
             if (start >= end)
-            {
                 return;
-            }
 
             // Split the array slice into two subslices
             int middle = (start + end) / 2;
@@ -25,10 +23,8 @@
             // Merge two [already sorted] subslices into temporary array holding sorted original slice
             int[] temp = MergeSorted(arr, start, middle, arr, middle + 1, end);
             // Copy from temporary array into original slice of the array
-            foreach (var i in temp)
-            {
-                arr[start++] = i;
-            }
+            for (int i = 0; i < temp.Length; ++i)
+                arr[start++] = temp[i];
         }
 
         public static int[] MergeSorted(int[] arr1, int start1, int end1, int[] arr2, int start2, int end2)
@@ -44,13 +40,9 @@
             {
                 // if current element of first array is <= than current element of second array
                 if (arr1[start1] <= arr2[start2])
-                {
                     result[index] = arr1[start1++]; // move from first array to result array
-                }
                 else
-                {
                     result[index] = arr2[start2++]; // move from second array to result array
-                }
 
                 ++index; // increment the index of the next free element of result array
             }
@@ -58,14 +50,10 @@
             // NB: One of the two original arrays is finished!!!
             // if we did not finish the first array - move its tail to the end of the result array
             while (start1 <= end1)
-            {
                 result[index++] = arr1[start1++];
-            }
             // if we did not finish the second array - move its tail to the end of the result array
             while (start2 <= end2)
-            {
                 result[index++] = arr2[start2++];
-            }
 
             // return the result array
             return result;
