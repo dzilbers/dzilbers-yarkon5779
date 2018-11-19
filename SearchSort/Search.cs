@@ -8,7 +8,7 @@ namespace Yarkon5779
 {
     static partial class SearchAndSort
     {
-        public static int Search1(int[] arr, int number)
+        public static int SearchLinearLoop1(int[] arr, int number)
         {
             int n = arr.Length;
             for (int i = 0; i < n; ++i)
@@ -19,7 +19,8 @@ namespace Yarkon5779
             return -1;
         }
 
-        public static int Search2(int[] arr, int number)
+        // Improve performance (efficiency)
+        public static int SearchLinearLoop2(int[] arr, int number)
         {
             int last = arr.Length - 1;
 
@@ -37,17 +38,24 @@ namespace Yarkon5779
             return (index < last) ? index : -1;
         }
 
-        public static int Search3(int[] arr, int number)
+        public static int SearchLinearRecursiveHelper(int[] arr, int number)
         {
-            return search3(arr, number, arr.Length - 1);
+            return SearchLinearRecursive(arr, number, 0);
         }
-
-        private static int search3(int[] arr, int number, int last)
+        // Converted from SearchLinearLoop1
+        // Additional parameter index ~ loop variable i
+        private static int SearchLinearRecursive(int[] arr, int number, int index)
         {
-            if (last == 0)
-                return arr[0] == number ? 0 : -1;
+            // Stop condition 1 ~ loop condition: end of array
+            if (index == arr.Length)
+                return -1;
 
-            return arr[last] == number ? number : search3(arr, number, last - 1);
+            // Stop condition 2 - we have found the value
+            if (arr[index] == number) // stop condition 1
+                return index;
+
+            // Recursive call ~ recall the loop body including index increment
+            return SearchLinearRecursive(arr, number, index + 1);
         }
 
         private static int findMax2(int[] arr, int last)
@@ -79,11 +87,11 @@ namespace Yarkon5779
             return index;
         }
 
-        public static int BinSearch2(int[] arr, int number)
+        public static int BinSearchRecursiveHelper(int[] arr, int number)
         {
-            return BinSearch2(arr, number, 0, arr.Length - 1);
+            return BinSearchRecursive(arr, number, 0, arr.Length - 1);
         }
-        private static int BinSearch2(int[] arr, int number, int from, int to)
+        private static int BinSearchRecursive(int[] arr, int number, int from, int to)
         {
             if (from > to) // recursion stop condition #1
                 return -1;
@@ -93,12 +101,12 @@ namespace Yarkon5779
                 return middle;
 
             if (number < arr[middle])
-                return BinSearch2(arr, number, from, middle - 1);
+                return BinSearchRecursive(arr, number, from, middle - 1);
             else
-                return BinSearch2(arr, number, middle + 1, to);
+                return BinSearchRecursive(arr, number, middle + 1, to);
         }
 
-        public static int BinSearch1(int[] arr, int number)
+        public static int BinSearchLoop(int[] arr, int number)
         {
             int from = 0, to = arr.Length - 1;
 
@@ -114,8 +122,6 @@ namespace Yarkon5779
             }
             return -1;
         }
-
-
 
     }
 }
