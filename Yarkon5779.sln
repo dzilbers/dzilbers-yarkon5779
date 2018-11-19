@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchSort", "SearchSort\Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chains", "Chains\Chains.csproj", "{44A9B989-FB1D-4E03-ADF4-5AC1932F2BB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursion46", "Recursion46\Recursion46.csproj", "{21261080-4D49-4AE9-846E-C6E6C5C9C063}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{44A9B989-FB1D-4E03-ADF4-5AC1932F2BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44A9B989-FB1D-4E03-ADF4-5AC1932F2BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44A9B989-FB1D-4E03-ADF4-5AC1932F2BB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21261080-4D49-4AE9-846E-C6E6C5C9C063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21261080-4D49-4AE9-846E-C6E6C5C9C063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21261080-4D49-4AE9-846E-C6E6C5C9C063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21261080-4D49-4AE9-846E-C6E6C5C9C063}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
