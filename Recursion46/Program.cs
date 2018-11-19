@@ -8,7 +8,6 @@ namespace Recursion46
 {
     class Program
     {
-        enum Directions { }
         static int neighboors(char[,] map, int row, int col)
         {
             int temp = neighboorsRecursion(map, row, col);
