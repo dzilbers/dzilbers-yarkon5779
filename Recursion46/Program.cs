@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Recursion46
 {
@@ -30,33 +26,6 @@ namespace Recursion46
                 neighboorsRecursion(map, row + 1, col) + // Down
                 neighboorsRecursion(map, row, col - 1) + // Left
                 neighboorsRecursion(map, row, col + 1);  // Right
-            /*
-            int sum = 1;
-            map[row, col] = 'y';
-            // Up
-            if (row > 0)
-                sum += neighboors(map, row - 1, col);
-            // Down
-            if (row < map.GetUpperBound(0))
-                sum += neighboors(map, row + 1, col);
-            // Left
-            if (col > 0)
-                sum += neighboors(map, row, col - 1);
-            // Right
-            if (col < map.GetUpperBound(1))
-                sum += neighboors(map, row, col + 1);
-            return sum;
-            */
-        }
-
-        static void print(char[,]map)
-        {
-            for (int i = 0; i < map.GetLength(0); ++i)
-            {
-                for (int j = 0; j < map.GetLength(1); ++j)
-                    Console.Write(" " + map[i, j]);
-                Console.WriteLine();
-            }
         }
 
         static void Main(string[] args)
@@ -71,7 +40,6 @@ namespace Recursion46
                     { 'x', ' ', ' ', 'x', ' ', ' ', ' ' }
                 };
 
-            // char[,] matrix = new char[7, 6];
             while (true)
             {
                 Console.WriteLine("Please enter row and column number:");
