@@ -1,4 +1,4 @@
-﻿namespace Yarkon5779
+﻿namespace SearchSort
 {
     static partial class SearchAndSort
     {

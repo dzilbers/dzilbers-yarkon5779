@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Yarkon5779
+namespace SearchSort
 {
-    static partial class SearchAndSort
+    public static partial class SearchAndSort
     {
 
         // מיון בחירה - פוקצייה עוטפת ציבורית

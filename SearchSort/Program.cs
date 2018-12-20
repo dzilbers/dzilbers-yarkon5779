@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Yarkon5779
+namespace SearchSort
 {
     static partial class SearchAndSort
     {
@@ -51,8 +51,8 @@ namespace Yarkon5779
             }
             Console.WriteLine("Original array: ");
             printNumbers(numbers);
-            Console.WriteLine("Merge sort: ");
-            SortMerge(numbers);
+            Console.WriteLine("Insertion sort: ");
+            SortInsertion(numbers);
             printNumbers(numbers);
         }
 
