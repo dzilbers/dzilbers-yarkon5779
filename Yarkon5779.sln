@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bohan1BQ3", "Bohan1BQ3\Boha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bohan1BQ4", "Bohan1BQ4\Bohan1BQ4.csproj", "{6FA102D9-8E6D-4833-87B4-C4758A73D4B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "Stack\Stack.csproj", "{54F1D2A8-EAF9-4E01-AF2F-B13D8AFD88A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{6FA102D9-8E6D-4833-87B4-C4758A73D4B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FA102D9-8E6D-4833-87B4-C4758A73D4B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FA102D9-8E6D-4833-87B4-C4758A73D4B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54F1D2A8-EAF9-4E01-AF2F-B13D8AFD88A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F1D2A8-EAF9-4E01-AF2F-B13D8AFD88A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F1D2A8-EAF9-4E01-AF2F-B13D8AFD88A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F1D2A8-EAF9-4E01-AF2F-B13D8AFD88A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{44A9B989-FB1D-4E03-ADF4-5AC1932F2BB7}</ProjectGuid>
+    <ProjectGuid>{54F1D2A8-EAF9-4E01-AF2F-B13D8AFD88A3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Chains</RootNamespace>
-    <AssemblyName>Chains</AssemblyName>
+    <RootNamespace>Stack</RootNamespace>
+    <AssemblyName>Stack</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,13 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IntNode.cs" />
-    <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chains\Chains.csproj">
+      <Project>{44a9b989-fb1d-4e03-adf4-5ac1932f2bb7}</Project>
+      <Name>Chains</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
