@@ -33,5 +33,10 @@ namespace Chains
         {
             this.next = next;
         }
+
+        public bool HasNext()
+        {
+            return next != null;
+        }
     }
 }

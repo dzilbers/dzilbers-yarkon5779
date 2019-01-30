@@ -36,6 +36,10 @@ namespace Chains
         {
             this.prev = prev;
         }
+        public bool HasPrev()
+        {
+            return prev != null;
+        }
         public BiDirNode<T> GetNext()
         {
             return next;
@@ -43,6 +47,10 @@ namespace Chains
         public void SetNext(BiDirNode<T> next)
         {
             this.next = next;
+        }
+        public bool HasNext()
+        {
+            return next != null;
         }
     }
 }
