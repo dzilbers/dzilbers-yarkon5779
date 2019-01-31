@@ -23,6 +23,12 @@ namespace BinTree
 
         static void Main(string[] args)
         {
+            Console.Write("Press a key (enter a char): ");
+            char ch1 = Console.ReadKey().KeyChar;
+            Console.WriteLine();
+            Console.WriteLine(ch1);
+            ch1 = (char)(ch1 + 1);
+            Console.WriteLine(ch1);
         }
     }
 }
