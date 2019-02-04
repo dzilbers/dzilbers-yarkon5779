@@ -35,7 +35,6 @@ namespace BinTree
         {
             if (bt != null)
             {
-                Console.WriteLine(bt.GetValue());
                 PrintInOrder(bt.GetLeft());
                 Console.WriteLine(bt.GetValue());
                 PrintInOrder(bt.GetRight());
