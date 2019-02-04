@@ -37,7 +37,7 @@ namespace BinTree
         {
             return value;
         }
-        public void GetValue(T value)
+        public void SetValue(T value)
         {
             this.value = value;
         }
@@ -46,7 +46,7 @@ namespace BinTree
         {
             return left;
         }
-        public void GetLeft(BinTreeNode<T> left)
+        public void SetLeft(BinTreeNode<T> left)
         {
             this.left = left;
         }
@@ -55,7 +55,7 @@ namespace BinTree
         {
             return right;
         }
-        public void GetRight(BinTreeNode<T> right)
+        public void SetRight(BinTreeNode<T> right)
         {
             this.right = right;
         }
