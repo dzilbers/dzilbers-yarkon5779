@@ -25,7 +25,7 @@ namespace BinTree
         {
             if (bt != null)
             {
-                Console.WriteLine(bt.GetValue());
+                Console.Write(bt.GetValue() + " ");
                 PrintPreOrder(bt.GetLeft());
                 PrintPreOrder(bt.GetRight());
             }
@@ -36,7 +36,7 @@ namespace BinTree
             if (bt != null)
             {
                 PrintInOrder(bt.GetLeft());
-                Console.WriteLine(bt.GetValue());
+                Console.Write(bt.GetValue() + " ");
                 PrintInOrder(bt.GetRight());
             }
         }
@@ -47,7 +47,7 @@ namespace BinTree
             {
                 PrintPostOrder(bt.GetLeft());
                 PrintPostOrder(bt.GetRight());
-                Console.WriteLine(bt.GetValue());
+                Console.Write(bt.GetValue() + " ");
             }
         }
 
