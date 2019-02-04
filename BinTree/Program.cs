@@ -13,7 +13,7 @@ namespace BinTree
             {
                 bt = q.Remove();
                 // Action on bt
-                Console.WriteLine(bt.GetValue());
+                Console.Write(bt.GetValue() + " ");
                 if (bt.HasLeft())
                     q.Insert(bt.GetLeft());
                 if (bt.HasRight())
