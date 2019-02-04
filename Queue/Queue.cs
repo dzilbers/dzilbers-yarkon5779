@@ -25,7 +25,10 @@ namespace Queue
         public void Insert(T value)
         {
             Node<T> node = new Node<T>(value);
-            last.SetNext(node);
+            if (IsEmpty())
+                first = node;
+            else
+                last.SetNext(node);
             last = node;
         }
 
@@ -43,7 +46,11 @@ namespace Queue
 
         public override string ToString()
         {
-            return "queue";
+            String s = "<- ";
+            for (Node<T> node = first; node != null; node = node.GetNext())
+                s += node.GetValue() + " ";
+            s += "<-";
+            return s;
         }
     }
 }

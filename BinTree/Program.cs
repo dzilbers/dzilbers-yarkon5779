@@ -59,6 +59,28 @@ namespace BinTree
             Console.WriteLine(ch1);
             ch1 = (char)(ch1 + 1);
             Console.WriteLine(ch1);
+            BinTreeNode<char> a = new BinTreeNode<char>('a');
+            BinTreeNode<char> b = new BinTreeNode<char>('b');
+            BinTreeNode<char> c = new BinTreeNode<char>('c');
+            BinTreeNode<char> d = new BinTreeNode<char>('d');
+            BinTreeNode<char> e = new BinTreeNode<char>('e');
+            BinTreeNode<char> f = new BinTreeNode<char>('f');
+            a.SetLeft(b);
+            a.SetRight(c);
+            b.SetRight(d);
+            c.SetLeft(e);
+            c.SetRight(f);
+            Console.WriteLine("Preorder:");
+            PrintPreOrder(a);
+            Console.WriteLine();
+            Console.WriteLine("Inorder:");
+            PrintInOrder(a);
+            Console.WriteLine();
+            Console.WriteLine("Postorder:");
+            PrintPostOrder(a);
+            Console.WriteLine();
+            Console.WriteLine("Travers by Levels:");
+            TraverseByLevel(a);
         }
     }
 }
