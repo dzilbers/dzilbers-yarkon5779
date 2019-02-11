@@ -51,6 +51,32 @@ namespace BinTree
             }
         }
 
+        private static bool isDigit(Char c)
+        {
+            return c >= '0' && c <= '9';
+        }
+
+        public static int ComputeExprTree(BinTreeNode<Char> expr)
+        {
+            Char ch = expr.GetValue();
+            if (isDigit(ch))
+                return (int)(ch - '0');
+            int left = ComputeExprTree(expr.GetLeft());
+            int right = ComputeExprTree(expr.GetRight());
+            switch (ch)
+            {
+                case '+':
+                    return left + right;
+                case '-':
+                    return left - right;
+                case '*':
+                    return left * right;
+                case '/':
+                    return left / right;
+            }
+            return 0;
+        }
+
         static void Main(string[] args)
         {
             Console.Write("Press a key (enter a char): ");
