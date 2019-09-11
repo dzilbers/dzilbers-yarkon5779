@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D666D868-D109-43D0-9DCD-A778E49E6C61}</ProjectGuid>
+    <ProjectGuid>{A73F7F36-BC71-4C7E-98E5-29F932321B68}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BinTree</RootNamespace>
-    <AssemblyName>BinTree</AssemblyName>
+    <RootNamespace>DataP51Ex8</RootNamespace>
+    <AssemblyName>DataP51Ex8</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,23 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinarySearchTree.cs" />
-    <Compile Include="BinNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Queue\Queue.csproj">
-      <Project>{59b0e392-c0dd-494a-8c1f-aacb7a3fca19}</Project>
-      <Name>Queue</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Stack\Stack.csproj">
-      <Project>{54f1d2a8-eaf9-4e01-af2f-b13d8afd88a3}</Project>
-      <Name>Stack</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

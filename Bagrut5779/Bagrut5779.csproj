@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D666D868-D109-43D0-9DCD-A778E49E6C61}</ProjectGuid>
+    <ProjectGuid>{4E4F08E7-A812-4DBB-BE0C-0FDD8EA2AEE8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BinTree</RootNamespace>
-    <AssemblyName>BinTree</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <RootNamespace>Bagrut5779</RootNamespace>
+    <AssemblyName>Bagrut5779</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,8 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinarySearchTree.cs" />
-    <Compile Include="BinNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -52,6 +49,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BinTree\BinTree.csproj">
+      <Project>{d666d868-d109-43d0-9dcd-a778e49e6c61}</Project>
+      <Name>BinTree</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chains\Chains.csproj">
+      <Project>{44a9b989-fb1d-4e03-adf4-5ac1932f2bb7}</Project>
+      <Name>Chains</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Queue\Queue.csproj">
       <Project>{59b0e392-c0dd-494a-8c1f-aacb7a3fca19}</Project>
       <Name>Queue</Name>

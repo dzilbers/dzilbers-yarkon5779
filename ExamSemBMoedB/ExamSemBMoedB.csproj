@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D666D868-D109-43D0-9DCD-A778E49E6C61}</ProjectGuid>
+    <ProjectGuid>{67C20BD5-44BD-452A-ABC9-FFC020848EB5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BinTree</RootNamespace>
-    <AssemblyName>BinTree</AssemblyName>
+    <RootNamespace>ExamSemBMoedB</RootNamespace>
+    <AssemblyName>ExamSemBMoedB</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinarySearchTree.cs" />
-    <Compile Include="BinNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -52,13 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Queue\Queue.csproj">
-      <Project>{59b0e392-c0dd-494a-8c1f-aacb7a3fca19}</Project>
-      <Name>Queue</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Stack\Stack.csproj">
-      <Project>{54f1d2a8-eaf9-4e01-af2f-b13d8afd88a3}</Project>
-      <Name>Stack</Name>
+    <ProjectReference Include="..\BinTree\BinTree.csproj">
+      <Project>{D666D868-D109-43D0-9DCD-A778E49E6C61}</Project>
+      <Name>BinTree</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
