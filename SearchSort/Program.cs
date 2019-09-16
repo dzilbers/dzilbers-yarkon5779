@@ -52,7 +52,7 @@ namespace SearchSort
             Console.WriteLine("Original array: ");
             printNumbers(numbers);
             Console.WriteLine("Insertion sort: ");
-            SortInsertion(numbers);
+            SortInsertion2(numbers);
             printNumbers(numbers);
         }
 
