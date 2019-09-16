@@ -41,8 +41,8 @@
             for (int i = 1; i < arr.Length; ++i)
             {
                 int temp = arr[i];
-                int j;
 
+                int j;
                 for (j = i - 1; j >= 0 && temp < arr[j]; --j)
                     arr[j + 1] = arr[j];
 
@@ -50,15 +50,14 @@
             }
         }
 
-
-        // מיון בחירה לא רגיל
-        public static void SortSelection2(int[] arr)
+        // מיון בחירה רגיל
+        public static void SortSelection1(int[] arr)
         {
             // נתחיל בסוף המערך ונעבור במערך מהסוף להתחלה
             for (int i = arr.Length - 1; i >= 0; --i)
             {
                 // נמצא את האלמנט עם הערך המקסימלי בחלק של המערך עד האלמנט הנוכחי כולל
-                int index = findMax1(arr, i);
+                int index = findMax1(arr, i); // הפונקציה מחזירה אינדקס של האלמנט עם הערך הגדול
                 if (index != i) // אם האלמנט הנוכחי אינו מקסימלי
                 {
                     // נחליף ערכם בין האלמנט הנוכחי לאלמנט המקסימלי שמצאנו
@@ -69,7 +68,29 @@
         }
 
         // מיון בועות אחרי שני ייעולים
-        public static void BubbleSort(int[] arr)
+        public static void BubbleSort1(int[] arr)
+        {
+            for (int i = arr.Length; i > 0; --i)
+            {
+                for (int j = 0; j < arr.Length - 1; ++j) // לולאה על כל זוגות המערך בלי יעול
+                    if (arr[j] > arr[j + 1]) // אם אלמנט שמאלי גדול מאלמנט שלימינו אז
+                        swap(arr, j, j + 1); // נחליף ערכים בין שני אלמנטים
+            }
+        }
+
+        // מיון בועות אחרי שני ייעולים
+        public static void BubbleSort2(int[] arr)
+        {
+            for (int i = arr.Length; i > 0; --i)
+            {
+                for (int j = 0; j < i - 1; ++j) // לולאה על כל זוגות המערך עם יעול קטן
+                    if (arr[j] > arr[j + 1]) // אם אלמנט שמאלי גדול מאלמנט שלימינו אז
+                        swap(arr, j, j + 1); // נחליף ערכים בין שני אלמנטים
+            }
+        }
+
+        // מיון בועות אחרי שני ייעולים
+        public static void BubbleSort3(int[] arr)
         {
             bool done = false; // דגל שמסמן שעשינו מעבר בלי החלפות
             for (int i = arr.Length - 1; i >= 0 && !done; --i)
@@ -83,6 +104,25 @@
                         swap(arr, j, j + 1); // נחליף ערכים בין שני אלמנטים
                         // עשינו החלפה - לכן נסמן בדגל שעוד לא סיימנו את מיון הבועות
                         done = false;
+                    }
+                }
+            }
+        }
+
+        // מיון בועות אחרי שני ייעולים
+        public static void BubbleSort4(int[] arr)
+        {
+            int max = arr.Length - 1; // דגל שמסמן שעשינו מעבר בלי החלפות
+            for (int i = arr.Length - 1; i >= 0 && max > 0; --i)
+            {
+                int top = max;
+                for (int j = 0; j < top; ++j) // לולאה על כל זוגות המערך עם יעול קטן
+                {
+                    if (arr[j] > arr[j + 1]) // אם אלמנט שמאלי גדול מאלמנט שלימינו אז
+                    {
+                        swap(arr, j, j + 1); // נחליף ערכים בין שני אלמנטים
+                        // עשינו החלפה - לכן נסמן בדגל שעוד לא סיימנו את מיון הבועות
+                        max = j;
                     }
                 }
             }

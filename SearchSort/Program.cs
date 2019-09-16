@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Linq;
 
 namespace SearchSort
 {
     static partial class SearchAndSort
     {
-        static private Random random = new Random(DateTime.Now.Millisecond);
-        static private int[] numbers = new int[10];
+        private static Random random = new Random(DateTime.Now.Millisecond);
+        private static int[] numbers = new int[10];
 
         static void Main(string[] args)
         {
@@ -52,11 +53,19 @@ namespace SearchSort
             Console.WriteLine("Original array: ");
             printNumbers(numbers);
             Console.WriteLine("Insertion sort: ");
-            SortInsertion2(numbers);
+            BubbleSort4(numbers);
             printNumbers(numbers);
+
+            int[,] matrix =
+            {
+                { 1, 2, 3, 4, 5 },
+                { 2, 3, 4, 5, 6 }
+            };
+
+            Console.WriteLine(matrix.GetLength(0) + " X " + matrix.GetLength(1));
         }
 
-        static private void swap(int[] arr, int i, int j)
+        private static void swap(int[] arr, int i, int j)
         {
             int temp = arr[i];
             arr[i] = arr[j];
@@ -68,12 +77,10 @@ namespace SearchSort
             //arr[i] -= arr[j];
         }
 
-        static private void printNumbers(int[] arr)
+        private static void printNumbers(int[] arr)
         {
             foreach (var num in arr)
-            {
                 Console.Write(" " + num);
-            }
             Console.WriteLine();
         }
     }
