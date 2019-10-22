@@ -139,18 +139,16 @@
         private static void SortSelectionRecursive(int[] arr, int last)
         {
             if (last <= 0) // recursion stop condition תנאי העצירה של רקורסיה
-            {
                 return;  // מערך בגודל 1 או פחות אין מה למיין 
-            }
 
             int index = findMax1(arr, last);
             if (index != last)
-            {
                 swap(arr, index, last);
-            }
 
             SortSelectionRecursive(arr, last - 1);
         }
+
+
 
     }
 }

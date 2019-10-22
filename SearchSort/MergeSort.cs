@@ -3,30 +3,6 @@
     static partial class SearchAndSort
     {
 
-        public static void SortMerge(int[] arr)
-        {
-            sortMerge(arr, 0, arr.Length - 1);
-        }
-   
-        private static void sortMerge(int[] arr, int start, int end)
-        {
-            // Recursion stop condition - array of size 1 (or 0) is already sorted
-            if (start >= end)
-                return;
-
-            // Split the array slice into two subslices
-            int middle = (start + end) / 2;
-            // Sort each one of the subslices by SortMerge
-            sortMerge(arr, start, middle);
-            sortMerge(arr, middle + 1, end);
-
-            // Merge two [already sorted] subslices into temporary array holding sorted original slice
-            int[] temp = MergeSorted(arr, start, middle, arr, middle + 1, end);
-            // Copy from temporary array into original slice of the array
-            for (int i = 0; i < temp.Length; ++i)
-                arr[start++] = temp[i];
-        }
-
         public static int[] MergeSorted(int[] arr1, int start1, int end1, int[] arr2, int start2, int end2)
         {
             // The resulting array length will be sum of two original arrays' length
@@ -58,5 +34,30 @@
             // return the result array
             return result;
         }
+
+        public static void SortMerge(int[] arr)
+        {
+            sortMerge(arr, 0, arr.Length - 1);
+        }
+   
+        private static void sortMerge(int[] arr, int start, int end)
+        {
+            // Recursion stop condition - array of size 1 (or 0) is already sorted
+            if (start >= end)
+                return;
+
+            // Split the array slice into two subslices
+            int middle = (start + end) / 2;
+            // Sort each one of the subslices by SortMerge
+            sortMerge(arr, start, middle);
+            sortMerge(arr, middle + 1, end);
+
+            // Merge two [already sorted] subslices into temporary array holding sorted original slice
+            int[] temp = MergeSorted(arr, start, middle, arr, middle + 1, end);
+            // Copy from temporary array into original slice of the array
+            for (int i = 0; i < temp.Length; ++i)
+                arr[start++] = temp[i];
+        }
+
     }
 }
