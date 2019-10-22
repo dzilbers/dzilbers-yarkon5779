@@ -7,27 +7,27 @@ using Chains;
 
 namespace MivhanMajazitA
 {
-    // Using BiDirNode instead of BinNode because that is what I have defined in Chains project
+    // Using BinNode instead of BinNode because that is what I have defined in Chains project
     class Q3
     {
-        public static BiDirNode<int> FirstLeft(BiDirNode<int> pos)
+        public static BinNode<int> FirstLeft(BinNode<int> pos)
         { // A: total 10pt
             while (pos.GetPrev() != null)   // 4pt
                 pos = pos.GetPrev();        // 4pt
             return pos;                     // 2pt
         }
 
-        public static BiDirNode<int> FirstRight(BiDirNode<int> pos)
+        public static BinNode<int> FirstRight(BinNode<int> pos)
         {
             while (pos.GetNext() != null)
                 pos = pos.GetNext();
             return pos;
         }
 
-        public static bool What(BiDirNode<int> pos)
+        public static bool What(BinNode<int> pos)
         {
-            BiDirNode<int> left = FirstLeft(pos);
-            BiDirNode<int> right = FirstRight(pos);
+            BinNode<int> left = FirstLeft(pos);
+            BinNode<int> right = FirstRight(pos);
 
             int sum = left.GetValue() + right.GetValue();
             left = left.GetNext();

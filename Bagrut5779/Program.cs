@@ -181,11 +181,11 @@ namespace Bagrut5779
             return max;
         }
 
-        public static bool IsLeaf(BinNode<Range> tree)
+        public static bool IsLeaf(BinTree.BinNode<Range> tree)
         {
             return !tree.HasLeft() && !tree.HasRight();
         }
-        public static bool Order(BinNode<Range> tree)
+        public static bool Order(BinTree.BinNode<Range> tree)
         {
             if (tree == null) return true;
             // if (tree == null || IsLeaf(tree)) return true; // לא חובה לבדוק האם זה עלה
