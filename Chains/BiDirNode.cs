@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Chains
 {
-    public class BinNode<T>
+    public class BiDirNode<T>
     {
         private T value;
-        private BinNode<T> prev;
-        private BinNode<T> next;
-        public BinNode(T value)
+        private BiDirNode<T> prev;
+        private BiDirNode<T> next;
+        public BiDirNode(T value)
         {
             prev = null;
             next = null;
             this.value = value;
         }
-        public BinNode(T value, BinNode<T> prev, BinNode<T> next)
+        public BiDirNode(T value, BiDirNode<T> prev, BiDirNode<T> next)
         {
             this.prev = prev;
             this.next = next;
@@ -28,11 +28,11 @@ namespace Chains
         {
             return value;
         }
-        public BinNode<T> GetPrev()
+        public BiDirNode<T> GetPrev()
         {
             return prev;
         }
-        public void SetPrev(BinNode<T> prev)
+        public void SetPrev(BiDirNode<T> prev)
         {
             this.prev = prev;
         }
@@ -40,11 +40,11 @@ namespace Chains
         {
             return prev != null;
         }
-        public BinNode<T> GetNext()
+        public BiDirNode<T> GetNext()
         {
             return next;
         }
-        public void SetNext(BinNode<T> next)
+        public void SetNext(BiDirNode<T> next)
         {
             this.next = next;
         }

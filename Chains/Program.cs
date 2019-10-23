@@ -8,6 +8,17 @@ namespace Chains
 {
     class Program
     {
+
+        public static void InsertIntoSortedChain(IntNode chain, int x) // BAD ONE
+        {
+            if (chain.GetInfo() > x)
+                chain = new IntNode(x, chain);
+            else
+                while (chain.GetNext() != null && chain.GetNext().GetInfo() < x)
+                    chain = chain.GetNext();
+            chain.SetNext(new IntNode(x, chain.GetNext()));
+        }
+
         static Random rand = new Random();
         static IntNode chain = null;
         static void Main(string[] args)
