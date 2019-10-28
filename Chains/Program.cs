@@ -14,16 +14,27 @@ namespace Chains
             if (chain.GetInfo() > x)
                 chain = new IntNode(x, chain);
             else
+            {
                 while (chain.GetNext() != null && chain.GetNext().GetInfo() < x)
                     chain = chain.GetNext();
-            chain.SetNext(new IntNode(x, chain.GetNext()));
+                chain.SetNext(new IntNode(x, chain.GetNext()));
+            }
+            Console.Write("Inside: ");
+            PrintChain(chain);
         }
 
         static Random rand = new Random();
         static IntNode chain = null;
         static void Main(string[] args)
         {
-            
+            IntNode myChain = new IntNode(4);
+            InsertIntoSortedChain(myChain, 5);
+            InsertIntoSortedChain(myChain, 7);
+            Console.Write("Before: ");
+            PrintChain(myChain);
+            InsertIntoSortedChain(myChain, 2);
+            Console.Write("After: ");
+            PrintChain(myChain);
         }
 
         static void Insert(int x)
@@ -35,6 +46,13 @@ namespace Chains
             }
             IntNode temp = new IntNode(x, chain.GetNext());
             chain.SetNext(temp);
+        }
+
+        public static void PrintChain(IntNode chain)
+        {
+            for (; chain != null; chain = chain.GetNext())
+                Console.Write("" + chain + "->");
+            Console.WriteLine("#");
         }
 
     }
