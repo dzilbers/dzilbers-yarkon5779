@@ -34,21 +34,21 @@ namespace Queue
 
         public T Remove()
         {
-            T temp = first.GetValue();
+            T temp = first.GetInfo();
             first = first.GetNext();
             return temp;
         }
 
         public T Head()
         {
-            return first.GetValue();
+            return first.GetInfo();
         }
 
         public override string ToString()
         {
             String s = "<- ";
             for (Node<T> node = first; node != null; node = node.GetNext())
-                s += node.GetValue() + " ";
+                s += node.GetInfo() + " ";
             s += "<-";
             return s;
         }

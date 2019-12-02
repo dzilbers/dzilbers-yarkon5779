@@ -31,17 +31,17 @@ namespace Stack
             return tmp;
         }
         public T Top() {
-            return IsEmpty() ? default(T) : first.GetValue();
+            return IsEmpty() ? default(T) : first.GetInfo();
         }
 
         override public string ToString()
         {
             if (IsEmpty())
                 return "[]";
-            string s = "[" + first.GetValue() + ",";
+            string s = "[" + first.GetInfo() + ",";
             for (Node<T> curr = first.GetNext(); curr != null; curr = curr.GetNext())
             {
-                s += " " + curr.GetValue();
+                s += " " + curr.GetInfo();
                 s += curr.GetNext() == null ? "]" : ",";
             }
             return s;

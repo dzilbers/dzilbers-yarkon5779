@@ -171,10 +171,10 @@ namespace Bagrut5779
 
         public static int BigNumber(Node<Queue<int>> lst)
         {
-            int max = ToNumber(lst.GetValue());
+            int max = ToNumber(lst.GetInfo());
             for (Node<Queue<int>> cur = lst.GetNext(); cur != null; cur = cur.GetNext())
             {
-                int num = ToNumber(lst.GetValue());
+                int num = ToNumber(lst.GetInfo());
                 if (num > max)
                     max = num;
             }

@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bagrut5779", "Bagrut5779\Ba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataP51Ex8", "DataP51Ex8\DataP51Ex8.csproj", "{A73F7F36-BC71-4C7E-98E5-29F932321B68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5780Exam1Q1", "5780Exam1Q1\5780Exam1Q1.csproj", "{8C1A146E-5750-4BFA-B613-8C06AFE6204B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -257,6 +259,18 @@ Global
 		{A73F7F36-BC71-4C7E-98E5-29F932321B68}.Release|x64.Build.0 = Release|Any CPU
 		{A73F7F36-BC71-4C7E-98E5-29F932321B68}.Release|x86.ActiveCfg = Release|Any CPU
 		{A73F7F36-BC71-4C7E-98E5-29F932321B68}.Release|x86.Build.0 = Release|Any CPU
+		{8C1A146E-5750-4BFA-B613-8C06AFE6204B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C1A146E-5750-4BFA-B613-8C06AFE6204B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C1A146E-5750-4BFA-B613-8C06AFE6204B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8C1A146E-5750-4BFA-B613-8C06AFE6204B}.Debug|x64.Build.0 = Debug|Any CPU
+		{8C1A146E-5750-4BFA-B613-8C06AFE6204B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8C1A146E-5750-4BFA-B613-8C06AFE6204B}.Debug|x86.Build.0 = Debug|Any CPU
+		{8C1A146E-5750-4BFA-B613-8C06AFE6204B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C1A146E-5750-4BFA-B613-8C06AFE6204B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C1A146E-5750-4BFA-B613-8C06AFE6204B}.Release|x64.ActiveCfg = Release|Any CPU
+		{8C1A146E-5750-4BFA-B613-8C06AFE6204B}.Release|x64.Build.0 = Release|Any CPU
+		{8C1A146E-5750-4BFA-B613-8C06AFE6204B}.Release|x86.ActiveCfg = Release|Any CPU
+		{8C1A146E-5750-4BFA-B613-8C06AFE6204B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
