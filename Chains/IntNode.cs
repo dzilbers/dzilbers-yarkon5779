@@ -8,27 +8,27 @@ namespace Chains
 {
     public class IntNode
     {
-        int info;
+        int value;
         IntNode next;
 
         public IntNode(int x)
         {
-            info = x;
+            value = x;
             next = null;
         }
         public IntNode(int x, IntNode next)
         {
-            info = x;
+            value = x;
             this.next = next;
         }
 
-        public int GetInfo()
+        public int GetValue()
         {
-            return info;
+            return value;
         }
-        public void SetInfo(int x)
+        public void SetValue(int x)
         {
-            info = x;
+            value = x;
         }
 
         public IntNode GetNext()
@@ -42,7 +42,7 @@ namespace Chains
 
         public override string ToString()
         {
-            return "(" + info + ")";
+            return "(" + value + ")";
         }
 
         public void InsertAfter(IntNode temp)
