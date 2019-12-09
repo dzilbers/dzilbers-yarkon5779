@@ -8,26 +8,26 @@ namespace Chains
 {
     public class Node<T>
     {
-        private T info;
+        private T value;
         private Node<T> next;
         public Node(T value)
         {
             next = null;
-            this.info = value;
+            this.value = value;
         }
-        public Node(T info, Node<T> next)
+        public Node(T value, Node<T> next)
         {
             this.next = next;
-            this.info = info;
+            this.value = value;
         }
 
-        public T GetInfo()
+        public T GetValue()
         {
-            return info;
+            return value;
         }
-        public void SetInfo(T info)
+        public void SetInfo(T value)
         {
-            this.info = info;
+            this.value = value;
         }
         public Node<T> GetNext()
         {
