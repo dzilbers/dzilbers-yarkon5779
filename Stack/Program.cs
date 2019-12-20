@@ -31,8 +31,7 @@ namespace Stack
             RevertStack(temp, to);
         }
 
-        static Dictionary<char, char> parenthesis = new Dictionary<char, char>()
-                                                        { { ')', '(' }, { ']', '[' }, { '}', '{' } };
+        // תרגיל בדיקת הסוגריים בביטוי מתמטי
         public static bool CheckParenthesis(string expression)
         {
             Stack<char> stk = new Stack<char>();
@@ -46,18 +45,38 @@ namespace Stack
                     case '{':
                         stk.Push(ch);
                         break;
-                    //case ')':
-                        //if (stk.Pop() != '(')
-                        //    return false;
-                        //break;
-                    //case ']':
-                        //if (stk.Pop() != '[')
-                        //    return false;
-                        //break;
-                    //case '}':
-                        //if (stk.Pop() != '{')
-                        //    return false;
-                        //break;
+                    case ')':
+                        if (stk.Pop() != '(')
+                            return false;
+                        break;
+                    case ']':
+                        if (stk.Pop() != '[')
+                            return false;
+                        break;
+                    case '}':
+                        if (stk.Pop() != '{')
+                            return false;
+                        break;
+                }
+            }
+            return stk.IsEmpty();
+        }
+
+        static Dictionary<char, char> parenthesis = new Dictionary<char, char>()
+                                                        { { ')', '(' }, { ']', '[' }, { '}', '{' } };
+        public static bool CheckParenthesisAdvanced(string expression)
+        {
+            Stack<char> stk = new Stack<char>();
+            foreach (char ch in expression)
+            // for (int i = 0; i < expression.Length; ++i) { char ch = expression[i]; ...
+            {
+                switch (ch)
+                {
+                    case '(':
+                    case '[':
+                    case '{':
+                        stk.Push(ch);
+                        break;
                     case ')':
                     case ']':
                     case '}':
