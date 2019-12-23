@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Chains;
+﻿using Chains;
 
 namespace Stack
 {
@@ -15,23 +10,27 @@ namespace Stack
         {
             first = null;
         }
+
         public bool IsEmpty()
         {
             return first == null;
         }
+
         public void Push(T x) {
             first = new Node<T>(x, first);
         }
+
         public T Pop()
         {
-            if (IsEmpty())
+            if (first == null)
                 return default(T);
-            T tmp = Top();         // T tmp = first.GetValue();
+            T tmp = first.GetValue();
             first = first.GetNext();
             return tmp;
         }
+
         public T Top() {
-            return IsEmpty() ? default(T) : first.GetValue();
+            return first == null ? default(T) : first.GetValue();
         }
 
         override public string ToString()
