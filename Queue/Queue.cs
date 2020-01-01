@@ -40,7 +40,7 @@ namespace Queue
         public void Insert(T value)
         {
             Node<T> node = new Node<T>(value);
-            if (IsEmpty())
+            if (first == null)
                 first = node;
             else
                 last.SetNext(node);
@@ -55,6 +55,8 @@ namespace Queue
         {
             T temp = first.GetValue();
             first = first.GetNext();
+            if (first == null)
+                last = null;
             return temp;
         }
 
