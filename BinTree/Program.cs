@@ -115,36 +115,37 @@ namespace BinTree
 
         static void Main(string[] args)
         {
-            //Console.Write("Press a key (enter a char): ");
-            //char ch1 = Console.ReadKey().KeyChar;
-            //Console.WriteLine();
-            //Console.WriteLine(ch1);
-            //ch1 = (char)(ch1 + 1);
-            //Console.WriteLine(ch1);
-            //BinTreeNode<char> a = new BinTreeNode<char>('a');
-            //BinTreeNode<char> b = new BinTreeNode<char>('b');
-            //BinTreeNode<char> c = new BinTreeNode<char>('c');
-            //BinTreeNode<char> d = new BinTreeNode<char>('d');
-            //BinTreeNode<char> e = new BinTreeNode<char>('e');
-            //BinTreeNode<char> f = new BinTreeNode<char>('f');
-            //a.SetLeft(b);
-            //a.SetRight(c);
-            //b.SetRight(d);
-            //c.SetLeft(e);
-            //c.SetRight(f);
-            //Console.WriteLine("Preorder:");
-            //PrintPreOrder(a);
-            //Console.WriteLine();
-            //Console.WriteLine("Inorder:");
-            //PrintInOrder(a);
-            //Console.WriteLine();
-            //Console.WriteLine("Postorder:");
-            //PrintPostOrder(a);
-            //Console.WriteLine();
-            //Console.WriteLine("Travers by Levels:");
-            //TraverseByLevel(a);
+            Console.Write("Press a key (enter a char): ");
+            char ch1 = Console.ReadKey().KeyChar;
+            Console.WriteLine();
+            Console.WriteLine(ch1);
+            ch1 = (char)(ch1 + 1);
+            Console.WriteLine(ch1);
+            BinNode<char> a = new BinNode<char>('a');
+            BinNode<char> b = new BinNode<char>('b');
+            BinNode<char> c = new BinNode<char>('c');
+            BinNode<char> d = new BinNode<char>('d');
+            BinNode<char> e = new BinNode<char>('e');
+            BinNode<char> f = new BinNode<char>('f');
+            a.SetLeft(b);
+            a.SetRight(c);
+            b.SetRight(d);
+            c.SetLeft(e);
+            c.SetRight(f);
+            Console.WriteLine("Preorder:");
+            PrintPreOrder(a);
+            Console.WriteLine();
+            Console.WriteLine("Inorder:");
+            PrintInOrder(a);
+            Console.WriteLine();
+            Console.WriteLine("Postorder:");
+            PrintPostOrder(a);
+            Console.WriteLine();
+            Console.WriteLine("Travers by Levels:");
+            TraverseByLevel(a);
+            Console.WriteLine();
 
-            Console.WriteLine(ComputeExprTree(BuildExprTree("((2*3)+((8/2)*4))")));
+            //Console.WriteLine(ComputeExprTree(BuildExprTree("((2*3)+((8/2)*4))")));
         }
     }
 }

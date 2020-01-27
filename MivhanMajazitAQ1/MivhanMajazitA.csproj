@@ -53,6 +53,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BinTree\BinTree.csproj">
+      <Project>{d666d868-d109-43d0-9dcd-a778e49e6c61}</Project>
+      <Name>BinTree</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Chains\Chains.csproj">
       <Project>{44a9b989-fb1d-4e03-adf4-5ac1932f2bb7}</Project>
       <Name>Chains</Name>

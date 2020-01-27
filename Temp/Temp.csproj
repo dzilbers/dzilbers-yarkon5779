@@ -49,5 +49,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BinTree\BinTree.csproj">
+      <Project>{d666d868-d109-43d0-9dcd-a778e49e6c61}</Project>
+      <Name>BinTree</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chains\Chains.csproj">
+      <Project>{44a9b989-fb1d-4e03-adf4-5ac1932f2bb7}</Project>
+      <Name>Chains</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Queue\Queue.csproj">
+      <Project>{59b0e392-c0dd-494a-8c1f-aacb7a3fca19}</Project>
+      <Name>Queue</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Stack\Stack.csproj">
+      <Project>{54f1d2a8-eaf9-4e01-af2f-b13d8afd88a3}</Project>
+      <Name>Stack</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

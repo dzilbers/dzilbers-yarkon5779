@@ -22,13 +22,13 @@ namespace MivhanMajazitA
             Stack<TwoItems> result = new Stack<TwoItems>(); // 6pt
             while (!stk1.IsEmpty()) // 2pt
                 result.Push(new TwoItems(stk1.Pop(), LastAndRemove(stk1))); // 10pt
-                    // may be few lines:
-                //  {
-                //      int n1 = stk1.Pop();                    2pt
-                //      int n2 = LastAndRemove(stk1);           2pt
-                //      TwoItems item = new TwoItems(n1, n2);   4pt
-                //      result.Push(item);                      2pt
-                //  }
+                                                                            // may be few lines:
+                                                                            //  {
+                                                                            //      int n1 = stk1.Pop();                    2pt
+                                                                            //      int n2 = LastAndRemove(stk1);           2pt
+                                                                            //      TwoItems item = new TwoItems(n1, n2);   4pt
+                                                                            //      result.Push(item);                      2pt
+                                                                            //  }
             return result; // 1pt
         }
     }
