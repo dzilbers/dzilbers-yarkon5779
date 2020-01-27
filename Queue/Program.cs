@@ -21,6 +21,8 @@ namespace Queue
             Console.WriteLine(q);
             for (int i = 20; i < 30; ++i)
                 q.Insert(i);
+            Console.WriteLine(q);
+            Console.Write("Remove: ");
             for (int i = 0; i < 5; ++i)
                 Console.Write("" + q.Remove() + ", ");
             Console.WriteLine();

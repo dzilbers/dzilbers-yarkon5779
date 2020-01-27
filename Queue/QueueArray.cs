@@ -51,20 +51,11 @@ namespace Queue
             if (increment(next) == first)
             {   // Overflow - need to expand the array
                 T[] temp = new T[capacity + BLOCK];
-                if (next < first)
-                {
-                    int j = 0;
-                    for (int i = first; i < capacity; ++i, ++j)
-                        temp[j] = array[i];
-                    for (int i = 0; i < next; ++i, ++j)
-                        temp[j] = array[i];
-                }
-                else
-                {
-                    for (int i = first, j = 0; i < next; ++i, ++j)
-                        temp[j] = array[i];
-                }
+                // copy the queue values to new array temp starting with 0
+                for (int i = first, j = 0; i != next; i = increment(i), ++j)
+                    temp[j] = array[i];
                 first = 0;
+                // Before the new value, we have total of (capacity - 1) values
                 next = capacity - 1;
                 array = temp;
                 capacity += BLOCK;
@@ -102,19 +93,8 @@ namespace Queue
         public override string ToString()
         {
             String s = "<- ";
-            if (next < first)
-            {
-                for (int i = first; i < capacity; ++i)
-                    s += array[i] + " ";
-                if (next < first)
-                    for (int i = 0; i < next; ++i)
-                        s += array[i] + " ";
-            }
-            else
-            {
-                for (int i = first; i < next; ++i)
-                    s += array[i] + " ";
-            }   
+            for (int i = first; i != next; i = increment(i))
+                s += array[i] + " ";
             s += "<-";
             return s;
         }
