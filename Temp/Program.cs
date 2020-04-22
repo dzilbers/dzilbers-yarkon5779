@@ -272,7 +272,94 @@ namespace Temp
             return left == right && TRG26(tree.GetLeft()) && TRG26(tree.GetRight());
         }
 
-        static void Main(string[] args)
+        public static bool IsLeaf<T>(BinNode<T> tr)
+        {
+            return !tr.HasLeft() && !tr.HasRight();
+        }
+
+        public static int Calc(BinNode<int> exp)
+        {
+            // 1+, 2-, 3*, 4/
+            if (IsLeaf(exp))
+                return exp.GetValue();
+            // כאן זה לא עלה אלא פעולה ולכן יש בודאות שני הבנים
+            int left = Calc(exp.GetLeft());
+            int right = Calc(exp.GetRight());
+            int oper = exp.GetValue();
+            if (oper == 1)
+                return left + right;
+            if (oper == 2)
+                return left - right;
+            if (oper == 3)
+                return left * right;
+            // if (oper == 4) - זה מה שנשאר
+            return left / right;
+        }
+
+        public static int CountNodes1<T>(BinNode<T> tr)
+        {
+            if (tr == null) return 0;
+            return 1 + CountNodes1(tr.GetLeft()) + CountNodes1(tr.GetRight());
+        }
+
+        public static int CountNodes2<T>(BinNode<T> tr)
+        { // there must not be tr == null
+            if (IsLeaf(tr)) return 1;
+            int sum = 1;
+            if (tr.HasLeft()) sum = sum + CountNodes2(tr.GetLeft());
+            if (tr.HasRight()) sum = sum + CountNodes2(tr.GetRight());
+            return sum;
+        }
+
+        public static void PrintInorder<T>(BinNode<T> tr)
+        { // סריקה תוכית
+            if (tr == null) return;
+            PrintInorder(tr.GetLeft());
+            Console.WriteLine(tr.GetValue());
+            PrintInorder(tr.GetRight());
+        }
+
+        public static void PrintPreorder<T>(BinNode<T> tr)
+        { // סריקה תחילית
+            if (tr == null) return;
+            Console.WriteLine(tr.GetValue());
+            PrintInorder(tr.GetLeft());
+            PrintInorder(tr.GetRight());
+        }
+
+        public static void PrintPostorder<T>(BinNode<T> tr)
+        { // סריקה סופית
+            if (tr == null) return;
+            PrintPostorder(tr.GetLeft());
+            PrintPostorder(tr.GetRight());
+            Console.WriteLine(tr.GetValue());
+        }
+
+        public static double AverageDigit(int num)
+        {
+            return averageDigit(num, 0, 0);
+                }
+
+        private static double averageDigit(int num, int sum, int count)
+        {
+            if (num < 10) return (double)(sum + num) / (count + 1);
+            return averageDigit( num / 10, sum + num % 10, count + 1);
+        }
+
+        public static bool TestArithProgr(int[] arr)
+        {
+            return testArithProgr(arr, arr.Length - 2, arr[arr.Length - 1] - arr[arr.Length - 2]);
+        }
+
+        private static bool testArithProgr(int[] arr, int last, int d)
+        {
+            if (last == 0) return true;
+            if (arr[last] - arr[last - 1] != d) return false;
+            return testArithProgr(arr, last - 1, d);
+        }
+
+
+            static void Main(string[] args)
         {
             BinNode<double> tree = new BinNode<double>(1);
             BuildTree(tree);
