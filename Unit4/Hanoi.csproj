@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="HanoiTowers.cs" />
     <Compile Include="HanoiTowersApplication.cs" />
+    <Compile Include="HanoiTowersSimulator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +84,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Stack\Stack.csproj">
+      <Project>{54f1d2a8-eaf9-4e01-af2f-b13d8afd88a3}</Project>
+      <Name>Stack</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

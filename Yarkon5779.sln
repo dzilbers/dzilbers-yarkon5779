@@ -47,7 +47,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5780Exam1Q1", "5780Exam1Q1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinTreeCorona", "BinTreeCorona\BinTreeCorona.csproj", "{06BF74D9-59D0-48B7-8DAE-AA028AEE734A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit4", "Unit4\Unit4.csproj", "{4FF7259C-BDEC-4520-B70D-1CECE0080062}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hanoi", "Unit4\Hanoi.csproj", "{4FF7259C-BDEC-4520-B70D-1CECE0080062}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
