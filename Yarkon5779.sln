@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5780Exam1Q1", "5780Exam1Q1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinTreeCorona", "BinTreeCorona\BinTreeCorona.csproj", "{06BF74D9-59D0-48B7-8DAE-AA028AEE734A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit4", "Unit4\Unit4.csproj", "{4FF7259C-BDEC-4520-B70D-1CECE0080062}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -285,6 +287,18 @@ Global
 		{06BF74D9-59D0-48B7-8DAE-AA028AEE734A}.Release|x64.Build.0 = Release|Any CPU
 		{06BF74D9-59D0-48B7-8DAE-AA028AEE734A}.Release|x86.ActiveCfg = Release|Any CPU
 		{06BF74D9-59D0-48B7-8DAE-AA028AEE734A}.Release|x86.Build.0 = Release|Any CPU
+		{4FF7259C-BDEC-4520-B70D-1CECE0080062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FF7259C-BDEC-4520-B70D-1CECE0080062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FF7259C-BDEC-4520-B70D-1CECE0080062}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4FF7259C-BDEC-4520-B70D-1CECE0080062}.Debug|x64.Build.0 = Debug|Any CPU
+		{4FF7259C-BDEC-4520-B70D-1CECE0080062}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4FF7259C-BDEC-4520-B70D-1CECE0080062}.Debug|x86.Build.0 = Debug|Any CPU
+		{4FF7259C-BDEC-4520-B70D-1CECE0080062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FF7259C-BDEC-4520-B70D-1CECE0080062}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FF7259C-BDEC-4520-B70D-1CECE0080062}.Release|x64.ActiveCfg = Release|Any CPU
+		{4FF7259C-BDEC-4520-B70D-1CECE0080062}.Release|x64.Build.0 = Release|Any CPU
+		{4FF7259C-BDEC-4520-B70D-1CECE0080062}.Release|x86.ActiveCfg = Release|Any CPU
+		{4FF7259C-BDEC-4520-B70D-1CECE0080062}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
